@@ -4,7 +4,7 @@ class Php56Phalcon < AbstractPhp56Extension
   init
   desc "Full-stack PHP framework"
   homepage "https://phalconphp.com/"
-  url "https://codeload.github.com/phalcon/cphalcon/tar.gz/phalcon-v2.0.13"
+  url "https://github.com/phalcon/cphalcon/archive/phalcon-v2.0.13.tar.gz"
   sha256 "0a1bd6afe902c6f2f68cf5e2f2785503f5ad95d1d2cf1b66c77154c483a08a35"
   head "https://github.com/phalcon/cphalcon.git"
 
