@@ -18,7 +18,13 @@ class Php56Phalcon < AbstractPhp56Extension
   depends_on "pcre"
 
   def install
-    Dir.chdir "build/php5/64bits"
+    if MacOS.prefer_64_bit?
+      Dir.chdir "build/64bits"
+    else
+      Dir.chdir "build/32bits"
+    end
+
+    ENV.universal_binary if build.universal?
 
     safe_phpize
     system "./configure", "--prefix=#{prefix}",
